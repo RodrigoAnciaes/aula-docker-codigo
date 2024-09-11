@@ -11,3 +11,7 @@ startup_file
 
 cursor.executescript(startup_script)
 
+db.commit()
+db.close()
+print("Database created successfully")
+

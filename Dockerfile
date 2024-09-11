@@ -20,8 +20,5 @@ VOLUME ["/app/src"]
 # Move to the src folder
 WORKDIR /app/src
 
-# Run the database creation script and add users
-RUN python3 create_db.py && python3 adduser.py
-
 # Run the server
-CMD ["python3", "softdes.py"]
+CMD ["bash", "-c", "python3 create_db.py && python3 adduser.py && python3 softdes.py"]
